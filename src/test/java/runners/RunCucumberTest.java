@@ -15,11 +15,12 @@ import testUtil.Utility;
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
 				},
 		features = {"src/test/java/FeatureFiles/"},
-		glue = {"stepDef"},
-		tags = {"@sanity"}, // "@sanity or @feature" "@sanity and @feature"
-		monochrome = true,
-		strict = false,
-		dryRun = false
+		glue = {"stepDef"}
+		
+//		tags = {"@sanity"},
+//		monochrome = true,
+//		strict = false,
+//		dryRun = false
 )
 public class RunCucumberTest extends AbstractTestNGCucumberTests{
 	
