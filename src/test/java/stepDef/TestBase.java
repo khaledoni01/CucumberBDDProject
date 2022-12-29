@@ -19,6 +19,7 @@ import com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter;
 import io.cucumber.core.api.Scenario;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import pageObjects.LogInPageActions;
 
 public class TestBase {
@@ -76,13 +77,11 @@ public class TestBase {
 		WebDriver webDriver = null;
 
 		if (browserName.equalsIgnoreCase("Chrome")) {
-			System.setProperty("webdriver.chrome.driver",
-					System.getProperty("user.dir") + "/browser/chromedriver_85.exe");
+			WebDriverManager.chromedriver().setup();
 			webDriver = new ChromeDriver();
 		} 
 		else if (browserName.equalsIgnoreCase("IE")) {
-			System.setProperty("webdriver.ie.driver",
-					System.getProperty("user.dir") + "/browser/IEDriverServer_32.exe");
+			WebDriverManager.iedriver().setup();
 			InternetExplorerOptions caps = new InternetExplorerOptions();
 			caps.ignoreZoomSettings();
 			caps.disableNativeEvents();

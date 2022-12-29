@@ -1,10 +1,12 @@
 package runners;
 
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
+import stepDef.TestBase;
 
 @CucumberOptions(
 		plugin = {"pretty", 
@@ -29,6 +31,12 @@ public class RunCucumberTest extends AbstractTestNGCucumberTests{
     @DataProvider()
     public Object[][] scenarios() {
         return super.scenarios();
+    }
+    
+    @AfterSuite()
+    public void closeBrowser() {
+    	TestBase.getDriver().close();
+    	TestBase.getDriver().quit();
     }
 	
 	

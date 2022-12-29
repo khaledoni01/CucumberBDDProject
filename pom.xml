@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-  <groupId>CucumberBDDProject</groupId>
-  <artifactId>CucumberBDDProject</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+	<groupId>CucumberBDDProject</groupId>
+	<artifactId>CucumberBDDProject</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
 
-  <name>CucumberBDDProject</name>
-  <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
+	<name>CucumberBDDProject</name>
+	<!-- FIXME change it to the project's website -->
+	<url>http://www.example.com</url>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -103,6 +104,13 @@
 			<groupId>org.apache.directory.studio</groupId>
 			<artifactId>org.apache.commons.io</artifactId>
 			<version>2.4</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.github.bonigarcia</groupId>
+			<artifactId>webdrivermanager</artifactId>
+			<version>5.3.1</version>
+			<scope>test</scope>
 		</dependency>
 
 	</dependencies>
