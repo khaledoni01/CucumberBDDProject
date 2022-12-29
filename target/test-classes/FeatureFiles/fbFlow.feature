@@ -6,7 +6,7 @@ Feature: Verify the FB Login and registration feature
     And user provides facebook registration details
 
 
-  Scenario Outline: Verify the FB Login and Registration flows 1
+  Scenario Outline: Verify the FB Login and Registration flows 2
     Given user has landed on Facebook login page
     When user provides facebook login credentials "<username>" and "<password>"
     And user provides facebook registration details

@@ -5,34 +5,28 @@ import org.testng.annotations.DataProvider;
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
-import testUtil.FeaturesOverride;
-import testUtil.Utility;
 
 @CucumberOptions(
 		plugin = {"pretty", 
 				"html:target/cucumber-report",
-				"json:target/cucumber.json", 
-				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
+				"json:target/cucumber.json"
 				},
 		features = {"src/test/java/FeatureFiles/"},
 		glue = {"stepDef"}
 		
-//		tags = {"@sanity"},
-//		monochrome = true,
-//		strict = false,
-//		dryRun = false
 )
 public class RunCucumberTest extends AbstractTestNGCucumberTests{
 	
 	@BeforeSuite
 	public void beforeSuite() {
-		FeaturesOverride feat = new FeaturesOverride();
-		Utility util = new Utility();
-		feat.overrideAllFiles(util.getFeatureFilePath(), util.getExcelBasePath());
+		// you can have launch browser 
+		// but currently we're launching browser before every scenarios
+		
+		System.out.println("Before Suite");
 	}
 	
     @Override
-    @DataProvider(parallel = true)
+    @DataProvider()
     public Object[][] scenarios() {
         return super.scenarios();
     }
