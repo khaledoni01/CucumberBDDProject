@@ -34,9 +34,8 @@ public class RunCucumberTest extends AbstractTestNGCucumberTests{
     }
     
     @AfterSuite()
-    public void closeBrowser() {
-    	TestBase.getDriver().close();
-    	TestBase.getDriver().quit();
+    public void afterSuite() {
+    	System.out.println("After Suite");
     }
 	
 	

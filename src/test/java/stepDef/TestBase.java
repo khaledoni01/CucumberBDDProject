@@ -36,10 +36,10 @@ public class TestBase {
 	 */
 
 	
-	@Before()
+	@Before
 	public void scenarioStart() throws Throwable {
 		
-		this.openBrowser("chrome");
+		driver = this.openBrowser("chrome");
 
 		driver.manage().deleteAllCookies();
 		driver.get("https://www.facebook.com");
@@ -48,7 +48,7 @@ public class TestBase {
 		logInPageActions = new LogInPageActions();
 	}
 
-	@After()
+	@After
 	public void scenarioEnd(Scenario scenario) throws Throwable {
 
 		if (scenario.isFailed()) {
