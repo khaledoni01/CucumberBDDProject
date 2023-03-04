@@ -3,11 +3,11 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2022-12-31T07:19:03.057Z",
+        "start_timestamp": "2023-03-04T16:36:02.384Z",
         "before": [
           {
             "result": {
-              "duration": 5768221700,
+              "duration": 3942468600,
               "status": "passed"
             },
             "match": {
@@ -22,7 +22,7 @@
         "after": [
           {
             "result": {
-              "duration": 1008942300,
+              "duration": 832552700,
               "status": "passed"
             },
             "match": {
@@ -35,7 +35,7 @@
         "steps": [
           {
             "result": {
-              "duration": 13892200,
+              "duration": 39544800,
               "status": "passed"
             },
             "line": 4,
@@ -47,15 +47,15 @@
           },
           {
             "result": {
-              "duration": 407567501,
+              "duration": 374686300,
               "status": "passed"
             },
             "line": 5,
-            "name": "user provides facebook login credentials \"john\" and \"abc123\"",
+            "name": "user provides facebook login credentials \"John\" and \"abc123\"",
             "match": {
               "arguments": [
                 {
-                  "val": "john",
+                  "val": "John",
                   "offset": 42
                 },
                 {
@@ -69,7 +69,7 @@
           },
           {
             "result": {
-              "duration": 5559600,
+              "duration": 6749100,
               "status": "passed"
             },
             "line": 6,
@@ -82,11 +82,11 @@
         ]
       },
       {
-        "start_timestamp": "2022-12-31T07:19:10.267Z",
+        "start_timestamp": "2023-03-04T16:36:07.589Z",
         "before": [
           {
             "result": {
-              "duration": 2635645499,
+              "duration": 3493800600,
               "status": "passed"
             },
             "match": {
@@ -101,7 +101,7 @@
         "after": [
           {
             "result": {
-              "duration": 837342400,
+              "duration": 802569800,
               "status": "passed"
             },
             "match": {
@@ -114,10 +114,10 @@
         "steps": [
           {
             "result": {
-              "duration": 9830699,
+              "duration": 10184100,
               "status": "passed"
             },
-            "line": 10,
+            "line": 9,
             "name": "user has landed on Facebook login page",
             "match": {
               "location": "LoginPageTest.user_has_landed_on_Facebook_login_page()"
@@ -126,15 +126,15 @@
           },
           {
             "result": {
-              "duration": 278777400,
+              "duration": 306559300,
               "status": "passed"
             },
-            "line": 11,
-            "name": "user provides facebook login credentials \"john\" and \"abc123\"",
+            "line": 10,
+            "name": "user provides facebook login credentials \"John\" and \"abc123\"",
             "match": {
               "arguments": [
                 {
-                  "val": "john",
+                  "val": "John",
                   "offset": 42
                 },
                 {
@@ -148,7 +148,110 @@
           },
           {
             "result": {
-              "duration": 5866000,
+              "duration": 195900,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user clicks on login button",
+            "match": {
+              "location": "LoginPageTest.user_clicks_on_login_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5333900,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "user should be able to login",
+            "match": {
+              "location": "LoginPageTest.user_should_be_able_to_login()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-03-04T16:36:12.214Z",
+        "before": [
+          {
+            "result": {
+              "duration": 3054768200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "TestBase.scenarioStart()"
+            }
+          }
+        ],
+        "line": 17,
+        "name": "Verify the FB Login and Registration flows 2",
+        "description": "",
+        "id": "verify-the-fb-login-and-registration-feature;verify-the-fb-login-and-registration-flows-2;test-data-for-fb-flows;3",
+        "after": [
+          {
+            "result": {
+              "duration": 983846400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "TestBase.scenarioEnd(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 6571000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "user has landed on Facebook login page",
+            "match": {
+              "location": "LoginPageTest.user_has_landed_on_Facebook_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 313910100,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "user provides facebook login credentials \"Tom\" and \"abc123\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Tom",
+                  "offset": 42
+                },
+                {
+                  "val": "abc123",
+                  "offset": 52
+                }
+              ],
+              "location": "LoginPageTest.user_provides_facebook_login_credentials(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 88100,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user clicks on login button",
+            "match": {
+              "location": "LoginPageTest.user_clicks_on_login_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 11359700,
               "status": "passed"
             },
             "line": 12,

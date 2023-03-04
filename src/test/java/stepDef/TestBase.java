@@ -35,7 +35,7 @@ public class TestBase {
 	 * Object return methods of action classes
 	 */
 
-	
+	//hook
 	@Before
 	public void scenarioStart() throws Throwable {
 		
@@ -48,6 +48,7 @@ public class TestBase {
 		logInPageActions = new LogInPageActions();
 	}
 
+	//hook
 	@After
 	public void scenarioEnd(Scenario scenario) throws Throwable {
 

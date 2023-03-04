@@ -5,9 +5,9 @@
     <classes>
       <class name="runners.RunCucumberTest">
         <methods>
-          <include name="closeBrowser"/>
-          <include name="runScenario" invocation-numbers="0 1"/>
+          <include name="runScenario" invocation-numbers="0 1 2"/>
           <include name="tearDownClass"/>
+          <include name="afterSuite"/>
           <include name="beforeSuite"/>
           <include name="setUpClass"/>
         </methods>

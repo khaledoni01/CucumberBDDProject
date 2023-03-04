@@ -14,29 +14,30 @@ import stepDef.TestBase;
 				"json:target/cucumber.json"
 				},
 		features = {"src/test/java/FeatureFiles/"},
-		glue = {"stepDef"}
+		glue = {"stepDef"},
+		monochrome = true
 		
 )
-public class RunCucumberTest extends AbstractTestNGCucumberTests{
+public class RunCucumberTest extends AbstractTestNGCucumberTests {
 	
-	@BeforeSuite
-	public void beforeSuite() {
-		// you can have launch browser 
-		// but currently we're launching browser before every scenarios
-		
-		System.out.println("Before Suite");
-	}
-	
-    @Override
-    @DataProvider()
-    public Object[][] scenarios() {
-        return super.scenarios();
-    }
-    
-    @AfterSuite()
-    public void afterSuite() {
-    	System.out.println("After Suite");
-    }
+//	@BeforeSuite
+//	public void beforeSuite() {
+//		// you can have launch browser 
+//		// but currently we're launching browser before every scenarios
+//		
+//		System.out.println("Before Suite");
+//	}
+//	
+//    @Override
+//    @DataProvider()
+//    public Object[][] scenarios() {
+//        return super.scenarios();
+//    }
+//    
+//    @AfterSuite()
+//    public void afterSuite() {
+//    	System.out.println("After Suite");
+//    }
 	
 	
 }

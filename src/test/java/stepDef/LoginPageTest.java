@@ -2,6 +2,7 @@ package stepDef;
 
 import org.testng.Assert;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -29,7 +30,13 @@ public class LoginPageTest {
 		Assert.assertEquals(TestBase.getDriver().getCurrentUrl(), "https://www.facebook.com/");		
 					
 	}
-
     
+     
+	@And("^user clicks on login button$")
+	public void user_clicks_on_login_button() {
+	
+		System.out.println("new step");
+	}	
 
+	
 }

@@ -23,7 +23,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user provides facebook login credentials \"john\" and \"abc123\"",
+  "name": "user provides facebook login credentials \"John\" and \"abc123\"",
   "keyword": "When "
 });
 formatter.match({
@@ -59,6 +59,10 @@ formatter.step({
   "keyword": "When "
 });
 formatter.step({
+  "name": "user clicks on login button",
+  "keyword": "And "
+});
+formatter.step({
   "name": "user should be able to login",
   "keyword": "Then "
 });
@@ -75,7 +79,13 @@ formatter.examples({
     },
     {
       "cells": [
-        "john",
+        "John",
+        "abc123"
+      ]
+    },
+    {
+      "cells": [
+        "Tom",
         "abc123"
       ]
     }
@@ -100,11 +110,72 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user provides facebook login credentials \"john\" and \"abc123\"",
+  "name": "user provides facebook login credentials \"John\" and \"abc123\"",
   "keyword": "When "
 });
 formatter.match({
   "location": "LoginPageTest.user_provides_facebook_login_credentials(String,String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks on login button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "LoginPageTest.user_clicks_on_login_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user should be able to login",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "LoginPageTest.user_should_be_able_to_login()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Verify the FB Login and Registration flows 2",
+  "description": "",
+  "keyword": "Scenario Outline"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user has landed on Facebook login page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "LoginPageTest.user_has_landed_on_Facebook_login_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user provides facebook login credentials \"Tom\" and \"abc123\"",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "LoginPageTest.user_provides_facebook_login_credentials(String,String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks on login button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "LoginPageTest.user_clicks_on_login_button()"
 });
 formatter.result({
   "status": "passed"
